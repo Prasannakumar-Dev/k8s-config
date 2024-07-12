@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: stage-backend-kong-ingress
+  namespace: stage-backend
+  annotations:
+    konghq.com/strip-path: "true"
+spec:
+  rules:
+  - host: dev-heal.infoviz.co
+    http:
+      paths:
+      - path: /microservice1
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: microservice1
+            port:
+              number: 80
+      - path: /microservice2
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: microservice2
+            port:
+              number: 80

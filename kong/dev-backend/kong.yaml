@@ -1,0 +1,3 @@
+# values.yaml for installing Kong in dev-backend namespace
+ingressController:
+  installCRDs: false
