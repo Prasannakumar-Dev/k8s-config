@@ -20,6 +20,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: microservice2
+            name: kong-stage-kong-proxy
             port:
               number: 80
