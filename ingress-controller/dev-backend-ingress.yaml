@@ -4,6 +4,7 @@ metadata:
   name: dev-backend-ingress
   namespace: dev-backend
 spec:
+  ingressClassName: nginx  # Specify the IngressClass name here
   rules:
   - host: dev-heal.infoviz.co
     http:
